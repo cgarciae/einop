@@ -27,9 +27,6 @@ einop(x, 'i j k -> k i j').shape
 
 #### Reduction
 ```python
-import numpy as np
-from einops import einop
-
 x = np.random.randn(100, 5, 3)
 
 einop(x, 'i j k -> i j', reduction='sum').shape
