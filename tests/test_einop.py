@@ -1,5 +1,6 @@
-from einop import einop
 import numpy as np
+
+from einop import einop
 
 # TODO: make this a fixture
 x = np.arange(10 * 20 * 30 * 40).reshape([10, 20, 30, 40])
