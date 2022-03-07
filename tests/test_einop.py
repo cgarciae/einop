@@ -28,3 +28,9 @@ class TestEinop:
         y = einop(y, "b c () () -> c b")
         assert y.shape == (20, 10)
         return y
+
+    def test_example(self):
+        x = np.random.uniform(size=(10, 20))
+        y = einop(x, "height width -> batch width height", batch=32)
+
+        assert y.shape == (32, 20, 10)
