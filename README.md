@@ -40,5 +40,5 @@ einop(x, 'i j k -> i j', reduction='sum').shape
 x = np.random.randn(100, 5, 3)
 
 einop(x, 'i j k -> i j k l', l=10).shape
-(100, 5, 3, 10)
+>>> (100, 5, 3, 10)
 ```
