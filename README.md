@@ -21,6 +21,8 @@ assert y.shape == (32, 20, 10)
 
 #### Rearrange
 ```python
+x = np.random.randn(100, 5, 3)
+
 einop(x, 'i j k -> k i j').shape
 >>> (3, 100, 5)
 ```
@@ -35,6 +37,8 @@ einop(x, 'i j k -> i j', reduction='sum').shape
 
 #### Repeat
 ```python
+x = np.random.randn(100, 5, 3)
+
 einop(x, 'i j k -> i j k l', l=10).shape
 (100, 5, 3, 10)
 ```
